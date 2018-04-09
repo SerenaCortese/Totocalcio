@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Schedina {
-
+	//è un elenco di risultati ( il risultato è 1 op X op 2 )
+	//ogni schedina sarà una singola colonna
+	
 	private int N;
 
 	private List<Risultato> colonna;
@@ -21,9 +23,15 @@ public class Schedina {
 			throw new IllegalStateException("Too many elements in Schedina") ;
 		}
 	}
-
+	
 	public Risultato get(int partita) {
 		return colonna.get(partita);
+	}
+	/**
+	 * Rimuove l'ultimo risultato aggiunto.
+	 */
+	public void removeLast() {
+		colonna.remove(colonna.size()-1); 
 	}
 
 	public String toString() {

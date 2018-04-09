@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pronostico {
+	//è una lista di previsioni
 
 	private int N;
 	private List<Previsione> colonna;
@@ -20,6 +21,14 @@ public class Pronostico {
 			throw new IllegalStateException("Too many elements in Proonostico") ;
 		}
 	}
+	/**
+	 * 
+	 * @param i indice della partita nella colonna
+	 * @return La previsione della partita
+	 */
+	public Previsione get (int i) {
+		return this.colonna.get(i);
+	}
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder() ;
@@ -30,5 +39,6 @@ public class Pronostico {
 		sb.deleteCharAt(sb.length()-1) ;
 		return sb.toString() ;
 	}
+	
 
 }

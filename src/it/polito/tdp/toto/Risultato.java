@@ -1,6 +1,9 @@
 package it.polito.tdp.toto;
 
-public enum Risultato {
+public enum Risultato { 
+	//è il singolo risultato possibile della singola partita
+	//è una enumerazione per non usare i numeri 1,2,3 
+	//e dover dire che il 3 vale X=>definisco simboli
 
 	UNO, DUE, ICS;
 

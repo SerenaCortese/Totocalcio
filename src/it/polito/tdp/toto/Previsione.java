@@ -3,7 +3,10 @@ package it.polito.tdp.toto;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Previsione {
+public class Previsione { 
+	//previsioni che fa l'utente sono un set di risultati,
+	//non una lista perché gli elementi non sono mai ripetuti
+	//è una riga 1-X-2 mentre il risultato è 1 op X op 2
 	
 	private Set<Risultato> valori ;
 	
