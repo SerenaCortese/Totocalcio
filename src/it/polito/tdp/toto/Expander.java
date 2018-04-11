@@ -36,9 +36,12 @@ public class Expander {
 	 */
 	private void cerca(Schedina parziale, Pronostico p, int livello){ 
 
-		if(livello==p.getN()) {
+		if(livello==p.getN()) { //(se ho 8 elementi nel pronostico e sono al livello 8, ho finito)
 			// caso terminale => ho una soluzione completa
 			soluzione.add(new Schedina(parziale)) ;
+						//non metto add(parziale) perché non voglio copiare suo riferimento ma i suoi valori
+						//non voglio riferimento alla schedina corrente perché potrebbe subire modifiche
+						//voglio DEEP COPY non SHALLOW COPY
 			return ;
 		}
 		

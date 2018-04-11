@@ -9,11 +9,8 @@ public class TestPronostico {
 		
 		//previsione risultato della prima partita
 		p.add(new Previsione(Risultato.DUE, Risultato.UNO));
-		
-		//previsione seconda partita
+		//previsione altre partite
 		p.add(new Previsione(Risultato.UNO, Risultato.ICS)) ;
-		
-		//previsione terza partita
 		p.add(new Previsione(Risultato.UNO, Risultato.ICS, Risultato.DUE));
 		p.add(new Previsione(Risultato.ICS));
 		p.add(new Previsione(Risultato.UNO, Risultato.DUE)) ;

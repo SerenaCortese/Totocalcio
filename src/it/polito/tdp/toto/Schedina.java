@@ -16,10 +16,11 @@ public class Schedina {
 		this.colonna = new ArrayList<Risultato>();
 	}
 
-	// clone constructor
+	// clone constructor: copia i campi della vecchia schedina(other) in una nuova(nuovo oggetto)
 	public Schedina(Schedina other) {
 		this.N = other.N ;
 		this.colonna = new ArrayList<>(other.colonna) ;
+	//OCCHIO!this.colonna = other.colonna copia il riferimento e non i valori!!
 	}
 	
 	public void add(Risultato valore) {
