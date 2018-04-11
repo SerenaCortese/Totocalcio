@@ -30,6 +30,10 @@ public class Pronostico {
 		return this.colonna.get(i);
 	}
 	
+	public int getN() {
+		return this.N;
+	}
+	
 	public String toString() {
 		StringBuilder sb = new StringBuilder() ;
 		for(Previsione p: colonna) {

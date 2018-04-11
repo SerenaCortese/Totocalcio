@@ -1,8 +1,11 @@
 package it.polito.tdp.toto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Expander {
+	
+	private List<Schedina> soluzione;
 	
 	/**
 	 * Funzione usata (prepara le variabili) per chiamare funzione ricorsiva cerca(). 
@@ -10,8 +13,11 @@ public class Expander {
 	 * @return soluzione finale e completa
 	 */
 	public List<Schedina> expand(Pronostico p){
+		soluzione = new ArrayList<Schedina>() ;
 		
-		return null;
+		cerca(new Schedina(p.getN()), p, 0) ;
+		
+		return soluzione;
 	}
 	
 
@@ -29,6 +35,14 @@ public class Expander {
 	 * @param livello per sapere quante righe mancano alla soluzione finale
 	 */
 	private void cerca(Schedina parziale, Pronostico p, int livello){ 
+
+		if(livello==p.getN()) {
+			// caso terminale => ho una soluzione completa
+			soluzione.add(new Schedina(parziale)) ;
+			return ;
+		}
+		
+		
 		//PRENDO LE MOSSE POSSIBILI (è un set)
 		Previsione mosse = p.get(livello); //livello=0, mi dà prima partita perché lista parte da 0
 		
