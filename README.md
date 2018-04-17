@@ -13,9 +13,8 @@ X2
 si stamperanno le seguenti colonne:
 
 ```
-11X
-112
-1XX
-1X2
+1  1  1  1
+1  X  1  X
+X  X  2  2
 ```
  
